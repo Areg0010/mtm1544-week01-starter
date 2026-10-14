@@ -1,3 +1,95 @@
 /* MTM1544 Week 1: your stylesheet.
    This file is already linked from index.html. Write your rules below.
    Start by changing the body background colour and saving, to confirm the link works. */
+  
+   body {
+      margin: 0; /* let the header sit flush with the top of the page */
+   }
+   
+   /* Responsive Img Rule */
+   img {
+      max-width: 100%;
+      height:auto;
+   }
+
+   /* Page Wrapper Element */
+   .page-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+   }
+
+   /* Flexbox Navigation Bar: pinned left/right and vertically centered */
+   .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap:12px;
+      padding: 20px 0;
+      border-bottom: 1px solid #ddd;
+   }
+
+   /* Nested Flex Container for Nav Links with a gap */
+   .nav-links {
+      display: flex;
+      gap: 20px;
+      margin:0;
+      padding:0;
+      list-style:none;
+   }
+
+   /* Hover and Focus States on every nav link */
+   .nav-links a {
+      text-decoration:none;
+      color: #333;
+      padding:5px 8px;
+   }
+
+   .nav-links a:hover,
+   .nav-links a:focus {
+      background-color: #f0f0f0;
+      outline: 2px solid #0056b3;
+      outline-offset:2px;
+   }
+
+   /* Centering Exercise: center both vertically and horizontally on a fixed-height container */
+   .centered-container {
+      height: 200px;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30px 0;
+   }
+
+   /* Wrapping Row of Cards (Flexbox wrap and gap) */
+   .card-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 40px 0;
+   }
+
+   /* Card Styles */
+   .card {
+      flex: 1 1 220px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius:4px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+   }
+
+   .card:hover,
+   .card:focus-within {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+   }
+
+   /* 
+   Breakpoint Note:
+   When narrowing the browser slowly, the layout stops looking right at about 600px.
+   At that width the nav links no longer fit beside the site name, so the header wraps and the link drop onto a second line (or crowd of the name). 
+   the cards is okay a t a certain point: flex wrap moves them onto new rows, and they keep a 220x minimum width. But at some point the cards will be too narrow to read, so we need a media query to change the layout. 
+   */

@@ -2,6 +2,9 @@
 
 The starting point for **Week 1 Assignment: Styling the Starter Page** in MTM1544 (Web Styles).
 
+ as permitted by the assignment instructions, i styled week 1 starter page (Mountain Trail Guide) because my MT1511 site was not far enough along yet. 
+
+
 ## What to do
 
 1. Click **Use this template**, then **Create a new repository**. Give it a name you will
